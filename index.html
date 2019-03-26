@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/css/test.css">
+    <title>test page</title>
+  </head>
+  <body>
+      <div class="container">
+      <div class="row">
+          <div class="col-3">
+                <div class="card" id="veteran" style="width: 18rem;">
+                        <img src="Assets/media/images/General.jpg" class="card-img-top" alt="...">
+                        <h5 class="name"></h5>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item emotionalState"></li>
+                          <li class="list-group-item playerResistance"></li>
+                          <li class="list-group-item arguerType"></li>
+                          <li class="list-group-item attitudeTowardVeteran"></li>
+                          <li class="list-group-item attitudeTowardRevolutionary"></li>
+                          <li class="list-group-item insulted"></li>
+                        </ul>
+                </div>
+          </div>
+          <div class="col-5" id="text-display" style="margin: 2%"></div>
+          <div class="col-3">
+                <div class="card" id="revolutionary" style="width: 18rem;">
+                        <img src="Assets/media/images/Revolutionary.jpg" class="card-img-top" alt="...">
+                        <h5 class="name"></h5>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item emotionalState"></li>
+                          <li class="list-group-item playerResistance"></li>
+                          <li class="list-group-item arguerType"></li>
+                          <li class="list-group-item attitudeTowardVeteran"></li>
+                          <li class="list-group-item attitudeTowardRevolutionary"></li>
+                          <li class="list-group-item insulted"></li>
+                        </ul>
+                </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-3" id="playerOptions"><div class="btn-group-vertical">
+          <button type="button" class="btn btn-dark" id="steak">Steak</button>
+          <button type="button" class="btn btn-dark" id="noodles">Noodles</button>
+          <button type="button" class="btn btn-dark" id="drink">Drink</button>
+        </div>
+      </div>
+      <div class="col-3" id="playerChoices"> <div class="dropdown" id="other-location">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Actually, we could go to...
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <button class="dropdown-item" id="cafe"> a cafe by the river. </button>
+          <button class="dropdown-item" id="mexican">a good mexican place I know.</button>
+          <button class="dropdown-item" id="fast"> nowhere. Fasting will keep us sharp tomorrow.</button>
+        </div>
+      </div>
+      <div class="dropdown" id="insult-veteran">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Insult the veteran about his...
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <button class="dropdown-item" type="button" id="age"> age. </button>
+          <button class="dropdown-item" type="button" id="weight"> weight.</button>
+          <button class="dropdown-item" type="button" id="diplomacy-skills"> diplomatic prowess.</button>
+        </div>
+      </div>
+      <div class="dropdown" id="insult-revolutionary">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Insult the revoluitonary about her...
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <button class="dropdown-item" type="button" id="past"> past. </button>
+          <button class="dropdown-item" type="button" id="ideology"> ideology.</button>
+          <button class="dropdown-item" type="button" id="diplomacy-skills"> diplomatic prowess.</button>
+        </div>
+      </div></div>
+        <div class="col-3"></div>
+      </div>
+      </div>
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  <script src="Assets/javascript/barebones-test.js"></script>
+  </body>
+</html>
