@@ -7,3 +7,37 @@
 #playerChoices {
     display: none;
 }
+#playerReadout {
+    margin-bottom: 2%;
+}
+#actionDisplay {
+    z-index: 1;
+    border: 1px solid black;
+}
+#otherTurnDisplay {
+    display: none;
+}
+#resolutionBuilder {
+    z-index: 2;
+    display: none;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+}
+#resAbout {
+    border-bottom: 1px solid black;
+    font-style: italic;
+}
+#comp-progress {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    background-color: #ddd;
+    display: none;
+}
+#comp-bar {
+    background-color: #4CAF50;
+    width: 10px;
+    height: 30px;
+    position: absolute;
+}

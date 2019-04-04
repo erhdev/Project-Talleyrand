@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    .dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}</style>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <div class="container">
+      <div class="row">
+          <h2>Multi level dropdown menu in Bootstrap</h2>
+          <hr>
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </button>
+              <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                  <li class="dropdown-item"><a href="#">Some action</a></li>
+                  <li class="dropdown-item"><a href="#">Some other action</a></li>
+                  <li class="dropdown-divider"></li>
+                  <li class="dropdown-submenu">
+                    <a  class="dropdown-item" tabindex="-1" href="#">Hover me for more options</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a tabindex="-1" href="#">Second level</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item" href="#">Even More..</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="#">3rd level</a></li>
+                              <li class="dropdown-submenu"><a class="dropdown-item" href="#">another level</a>
+                              <ul class="dropdown-menu">
+                                  <li class="dropdown-item"><a href="#">4th level</a></li>
+                                  <li class="dropdown-item"><a href="#">4th level</a></li>
+                                  <li class="dropdown-item"><a href="#">4th level</a></li>
+                              </ul>
+                            </li>
+                              <li class="dropdown-item"><a href="#">3rd level</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-item"><a href="#">Second level</a></li>
+                      <li class="dropdown-item"><a href="#">Second level</a></li>
+                    </ul>
+                  </li>
+                </ul>
+          </div>
+      </div>
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+          Revolutionary about her...
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                    <button class="dropdown-item" type="button">Attire</button>
+                    <button class="dropdown-item" type="button">Diplomatic Ability</button>
+                    <button class="dropdown-item" type="button">Revolutionary Hypocrisy</button>
+                </button>
+            </div>
+        </button>
+    </div>

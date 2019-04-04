@@ -1,91 +1,161 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="Assets/css/test.css">
-    <title>test page</title>
-  </head>
-  <body>
-      <div class="container">
-      <div class="row">
-          <div class="col-3">
-                <div class="card" id="veteran" style="width: 18rem;">
-                        <img src="Assets/media/images/General.jpg" class="card-img-top" alt="...">
-                        <h5 class="name"></h5>
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item emotionalState"></li>
-                          <li class="list-group-item playerResistance"></li>
-                          <li class="list-group-item arguerType"></li>
-                          <li class="list-group-item attitudeTowardVeteran"></li>
-                          <li class="list-group-item attitudeTowardRevolutionary"></li>
-                          <li class="list-group-item insulted"></li>
-                        </ul>
-                </div>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="Assets/css/test.css">
+  <title>NegotiationPhaseTest</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row" id="playerReadout">
+      <div class="col-2">
+        <div class="card" id="player" style="width: 15rem;">
+          <img src="Assets/media/images/Prince (1).jpg" class="card-img-top" alt="...">
+          <h5 class="">Player</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item energy"></li>
+            <li class="list-group-item persuasiveness"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-10" id="resolutionBuilder">
+        <h2 id="resAbout">A Resolution Regarding <span class="particular"></span></h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item resAttribute" id="resAttribute1">
+            <span>The area at hand should belong to ...</span>
+            <label class="resAttributeOption resAttributeOptionAtt1" id="resAttributeOptionAtt1Option1">
+              <input type="radio" name="resAttributeOptionAtt1" data-owner= 'me' id='resAtt1Opt1' autocomplete="off"> Me.
+              <input type="radio" name="resAttributeOptionAtt1"  data-owner= 'Hallenland'  id='resAtt1Opt2' autocomplete="off"> Hallenland.
+              <input type="radio" name="resAttributeOptionAtt1"  data-owner= 'Robbespier' id='resAtt1Opt3' autocomplete="off"> Robbespier.
+              <input type="radio" name="resAttributeOptionAtt1"  data-owner= 'the natives'  id='resAtt1Opt4' autocomplete="off"> the people who live there. (<span class="particular"></span>
+              will become an independent state.)
+            </label>
+          </li>
+          <li class="list-group-item resAttribute" id="resAttribute1">
+            <span>It's tax revenue should... </span>
+            <label class="resAttributeOption resAttributeOptionAtt2" id="resAttributeOptionAtt1Option1">
+              <input type="radio"  name="resAttributeOptionAtt2" id='resAtt2Opt1'autocomplete="off"> be used as reparations to my country.
+              <input type="radio" name="resAttributeOptionAtt2" id='resAtt2Opt2' autocomplete="off"> be used as reparations to my Hallenland.
+              <input type="radio" name="resAttributeOptionAtt2" id='resAtt2Opt3' autocomplete="off"> be used as reparations to my Robbespier.
+              <input type="radio" name="resAttributeOptionAtt2" id='resAtt2Opt4' autocomplete="off"> belong to the people who live there.
+              <input type="radio" name="resAttributeOptionAtt2" id='resAtt2Opt5' autocomplete="off"> be put toward the International Court. (Fantasy UN, Does Nothing ATM)
+            </label>
+          </li>
+          <li class="list-group-item resAttribute" id="resAttribute1">
+            <span>The area should ...</span>
+            <label class="resAttributeOption resAttributeOptionAtt1" id="resAttributeOptionAtt1Option1">
+              <input type="radio" name="resAttributeOptionAtt3" id='resAtt3Opt1' autocomplete="off"> be totally demilitarized.
+              <input type="radio" name="resAttributeOptionAtt3" id='resAtt3Opt2' autocomplete="off"> stay militarized by <span id="areaOwner"></span>.
+              <input type="radio" name="resAttributeOptionAtt3" id='resAtt3Opt3'autocomplete="off"> be used as a peacekeeping base by the International Court. (Does Nothing ATM)
+            </label>
+          </li>
+          <li class="list-group-item resAttribute" id="resAttribute1">
+            <span>Style of Presentation:  </span>
+            <label class="resAttributeOption resAttributeOptionAtt1" id="resAttributeOptionAtt1Option1">
+              <input type="radio" name="resAttributeOptionAtt4" id='resAtt4Opt1' autocomplete="off"> Realpolitik.
+              <input type="radio" name="resAttributeOptionAtt4" id='resAtt4Opt2' autocomplete="off"> Ideological.
+              <input type="radio" name="resAttributeOptionAtt4" id='resAtt4Opt3' autocomplete="off"> Idealistic. (Does Nothing ATM)
+            </label>
+          </li>
+          <li class="list-group-item resAttribute" id="resAttribute1">
+              <h5>Impact:  </h5>
+              <label class="resAttributeOption" id="resAttributeOptionAtt1Option1">
+                <p>The Veteran would be <span id="impactVeteran">indifferent.</span></p>
+                <p>The Revolutionary would be <span id="impactRevolutionary">indifferent.</span></p>
+              </label>
+          </li>
+          <li class="list-group-item resAttribute">
+              <button type="button" class="btn btn-warning"  id="makeResolution">Make Resolution</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col-10" id="actionDisplay">
+        <div class="row">
+          <div class="col-3" id="playerTurnDisplay">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" id='advance-resolution' type="button" data-toggle="dropdown">
+                Advance A Resolution About...
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item resolution resButton" type="button" id="resCityX">City X</button>
+                <button class="dropdown-item resolution resButton" type="button" id="resProvinceY">Province Y</button>
+                <button class="dropdown-item resolution resButton" type="button" id="resPostWarOrder">The PostWar Order</button>
+              </div>
+            </div>
           </div>
-          <div class="col-5" id="text-display" style="margin: 2%"></div>
-          <div class="col-3">
-                <div class="card" id="revolutionary" style="width: 18rem;">
-                        <img src="Assets/media/images/Revolutionary.jpg" class="card-img-top" alt="...">
-                        <h5 class="name"></h5>
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item emotionalState"></li>
-                          <li class="list-group-item playerResistance"></li>
-                          <li class="list-group-item arguerType"></li>
-                          <li class="list-group-item attitudeTowardVeteran"></li>
-                          <li class="list-group-item attitudeTowardRevolutionary"></li>
-                          <li class="list-group-item insulted"></li>
-                        </ul>
-                </div>
+          <div class="col-3" id="otherTurnDisplay"></div>
+          <div class="col-9" id="actionLog">
+            <div id="comp-progress">
+              <div id="comp-bar"></div>
+            </div>
           </div>
+
+        </div>
+
       </div>
-      <div class="row">
-        <div class="col-3"></div>
-        <div class="col-3" id="playerOptions"><div class="btn-group-vertical">
-          <button type="button" class="btn btn-dark" id="steak">Steak</button>
-          <button type="button" class="btn btn-dark" id="noodles">Noodles</button>
-          <button type="button" class="btn btn-dark" id="drink">Drink</button>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="card mb-3" id="veteran">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="Assets/media/images/General.jpg" class="card-img-top" alt="...">
+              <h5 class="name"></h5>
+            </div>
+            <div class="col-8">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item emotionalState"></li>
+                <li class="list-group-item arguerType"></li>
+                <li class="list-group-item attitudeTowardPlayer"></li>
+                <li class="list-group-item attitudeTowardVeteran"></li>
+                <li class="list-group-item attitudeTowardRevolutionary"></li>
+                <li class="list-group-item temper"></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-3" id="playerChoices"> <div class="dropdown" id="other-location">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Actually, we could go to...
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <button class="dropdown-item" id="cafe"> a cafe by the river. </button>
-          <button class="dropdown-item" id="mexican">a good mexican place I know.</button>
-          <button class="dropdown-item" id="fast"> nowhere. Fasting will keep us sharp tomorrow.</button>
+      <div class="col-6">
+        <div class="card md-3" id="revolutionary">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="Assets/media/images/Revolutionary.jpg" class="card-img-top" alt="...">
+              <h5 class="name"></h5>
+            </div>
+            <div class="col-8">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item emotionalState"></li>
+                <li class="list-group-item arguerType"></li>
+                <li class="list-group-item attitudeTowardPlayer"></li>
+                <li class="list-group-item attitudeTowardVeteran"></li>
+                <li class="list-group-item attitudeTowardRevolutionary"></li>
+                <li class="list-group-item temper"></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="dropdown" id="insult-veteran">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Insult the veteran about his...
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <button class="dropdown-item" type="button" id="age"> age. </button>
-          <button class="dropdown-item" type="button" id="weight"> weight.</button>
-          <button class="dropdown-item" type="button" id="diplomacy-skills"> diplomatic prowess.</button>
-        </div>
-      </div>
-      <div class="dropdown" id="insult-revolutionary">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Insult the revoluitonary about her...
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <button class="dropdown-item" type="button" id="past"> past. </button>
-          <button class="dropdown-item" type="button" id="ideology"> ideology.</button>
-          <button class="dropdown-item" type="button" id="diplomacy-skills"> diplomatic prowess.</button>
-        </div>
-      </div></div>
-        <div class="col-3"></div>
-      </div>
-      </div>
-      <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-  <script src="Assets/javascript/barebones-test.js"></script>
-  </body>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="Assets/javascript/NegotiationPhase.js"></script>
+</body>
+
 </html>
